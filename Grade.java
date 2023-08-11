@@ -2,17 +2,19 @@ import java.util.*;
 public class Grade {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println ("Enter number of Subjects hou Have ");
+        System.out.println ("Enter number of Subjects you Have ");
         int n = in.nextInt();
-        int s=0;
+        int sum=0;
         for(int i=1;i<=n;i++){
-            System.out.println ("Enter Your Marks out of 100 ");
+            System.out.println ("Enter Subject Name");
+            String sub=in.next();
+            System.out.println ("Enter Your Marks of "+sub+" out of 100 ");
             int m=in.nextInt();
-            s=s+m;       // s denotes
+            sum=sum+m;       // sum denotes sum of all subjects
 
         }
-        int a=s/n;  // a denotes average of all subjects
-        System.out.println ("Your Total Marks is "+s);
+        int a=sum/n;  // a denotes average of all subjects
+        System.out.println ("Your Total Marks of all "+n+" subject is "+sum);
         System.out.println ("Percentage Obtained By you "+a+ "%");
         if (a>=90){
             System.out.println ( "Congratulation You Recieved Grade \"A\"" );
